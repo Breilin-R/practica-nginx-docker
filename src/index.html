@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola Mundo Violeta Oscuro</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Una fuente limpia y moderna */
+            display: flex; /* Para centrar el contenido fácilmente */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+            margin: 0;
+            background: linear-gradient(135deg, #2a003a 0%, #4a007a 100%); /* Degradado de violeta oscuro */
+            color: #f0e6fa; /* Texto muy claro para contrastar */
+            overflow: hidden; /* Evita barras de desplazamiento si hay efectos */
+        }
+
+        .container {
+            background-color: rgba(60, 0, 90, 0.8); /* Un violeta aún más oscuro y semitransparente */
+            padding: 50px 80px; /* Relleno generoso */
+            border-radius: 15px; /* Esquinas redondeadas */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra oscura */
+            text-align: center;
+            border: 2px solid #a353ff; /* Borde violeta brillante */
+            position: relative;
+            animation: fadeIn 1.5s ease-out; /* Animación de aparición */
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -10px; left: -10px;
+            right: -10px; bottom: -10px;
+            border: 2px solid #d4a3ff; /* Borde interior más claro para efecto neón */
+            border-radius: 18px;
+            opacity: 0.3;
+            animation: pulseBorder 2s infinite alternate; /* Animación de pulsación */
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3.5rem; /* Tamaño grande para el título */
+            margin: 0;
+            text-shadow: 0 0 15px rgba(212, 163, 255, 0.8); /* Sombra de texto brillante */
+            color: #d4a3ff; /* Color de texto violeta claro brillante */
+            letter-spacing: 2px; /* Espaciado entre letras */
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #e0d1f7; /* Un tono un poco más oscuro que el h1 */
+            opacity: 0.9;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulseBorder {
+            from { box-shadow: 0 0 5px rgba(212, 163, 255, 0.2); }
+            to { box-shadow: 0 0 20px rgba(212, 163, 255, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola Mundo!</h1>
+        <p>Bienvenido a una experiencia oscura y vibrante.</p>
+    </div>
+</body>
+</html>
